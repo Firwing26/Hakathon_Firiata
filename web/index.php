@@ -1,29 +1,45 @@
-
 <?php
 
-include "vk_api.php";
+require('../vendor/autoload.php');
+
+$app = new Silex\Application();
+$app['debug'] = true;
+
+$app->register(new Silex\Provider\MonologServiceProvider(), array(
+  'monolog.logfile' => 'php://stderr',
+));
 
 
-const VK_KEY = "5aa6dad050355119b482d9214a5fba1a5f2e272f64be00f11e7923f430e9037ab27d7163cf0dad57541bf";  // Токен сообщества
-const ACCESS_KEY = "FirasrivLATOK26";  // Тот самый ключ из сообщества
-const VERSION = "5.81"; // Версия API VK
+$app->get('/', function() use($app) {
+    return "HELLO WORLD";
+});
+
+$app->post('/', function() use($app) {
+      $data = json_decode(file_get_contents('php://input'));
+
+      if( !$data )
+         return "nook";
+
+      if( $data->secret !== getenv('VK_SECRET_TOKEN') && $data->type !== 'confirmation' )
+        return "nook";
+
+      switch ( $data->type) {
+        case 'confirmation':
+          return getenv('VK_CONFIRMATION_CODE')
+          break;
+
+        case 'message_new':
 
 
-$vk = new vk_api(VK_KEY, VERSION);
-$data = json_decode(file_get_contents('php://input'));
 
-if ($data->type == 'confirmation') {
-  exit(ACCESS_KEY);
-}
+             break;
+      }
 
 
-$id = $data->object->from_id;
-$message = $data->object->text;
+        return "nook";
 
-if($data->type == 'message_new')
-  {
 
-  }
 
-exit('ok');
-?>
+});
+
+$app->run();
