@@ -19,9 +19,9 @@ $app->post('/', function() use($app) {
       $data = json_decode(file_get_contents('php://input'));
 
       if( !$data )
-         return "HELLO WORLD";
+         return "nook";
 
-      if( $data->secret !== getenv('VK_CONFIRMATION_CODE') && $data->type !== 'confirmation' )
+      if( $data->secret !== getenv('VK_SECRET_TOKEN') && $data->type !== 'confirmation' )
         return "nook";
 
       switch ( $data->type) {
