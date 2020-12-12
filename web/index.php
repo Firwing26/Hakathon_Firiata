@@ -14,7 +14,8 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 $app->get('/', function() use($app) {
     return "HELLO WORLD";
 });
-    $app->get('/bot', function() use($app) {
+
+$app->post('/', function() use($app) {
       $data = json_decode(file_get_contents('php://input'));
 
       if( !$data )
@@ -30,7 +31,7 @@ $app->get('/', function() use($app) {
 
         case 'message_new':
 
-                 
+
 
              break;
       }
