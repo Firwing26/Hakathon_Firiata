@@ -30,23 +30,7 @@ $app->post('/', function() use($app) {
           break;
 
         case 'message_new':
-             $slovo = $data->object->body;
-             $request_params = array(
-               'user_id' => $data->object->user_id,
-               'message' => 'непонял',
-               'access_token' => getenv('VK_TOKEN')
-               'v' => '5.50'
-             )
-             $problem = array(
-               'first' => 'курит'
-             );
-             if $slovo == $problem['first']
-                $request_params['message'] = 'данная проблемма могла возникнуть из-за  малого количества уделенного времени ребенку';
-
-             file_get_content('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
-
-
-             return 'ok';
+          
              break;
       }
 
