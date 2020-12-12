@@ -63,5 +63,6 @@ $app->post('/', function() use($app) {
 
 
 });
+exit('ok');
 
 $app->run();
