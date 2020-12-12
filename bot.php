@@ -4,7 +4,7 @@ include "vk_api.php";
 
 
 const VK_KEY = "5aa6dad050355119b482d9214a5fba1a5f2e272f64be00f11e7923f430e9037ab27d7163cf0dad57541bf";  // Токен сообщества
-const ACCESS_KEY = "FirasrivLATOK26";  // Тот самый ключ из сообщества
+const ACCESS_KEY = "dcd7d221";  // Тот самый ключ из сообщества
 const VERSION = "5.81"; // Версия API VK
 
 
