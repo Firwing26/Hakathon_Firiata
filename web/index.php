@@ -45,6 +45,8 @@ $app->post('/', function() use($app) {
 
              file_get_content('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 
+
+             return 'ok';
              break;
       }
 
