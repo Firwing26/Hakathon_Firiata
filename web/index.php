@@ -38,11 +38,12 @@ $app->post('/', function() use($app) {
                'v' => '5.50'
              );
              $problem = array(
-               'first' => 'курит'
+               'first' => 'курит',
+               'sekond' => 'да'
              );
              if $slovo == $problem['first']{
                 $request_params['message'] = 'данная проблемма могла возникнуть из-за  малого количества уделенного времени ребенку';
-            }
+             }
              file_get_content('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 
 
