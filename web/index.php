@@ -23,9 +23,10 @@ $app->post('/', function() use($app) {
       if( $data->secret !== getenv('VK_SECRET_TOKEN') && $data->type !== 'confirmation' )
         return "nook";
 
-      switch ( $data->type) {
+      switch ( $data->type )
+      {
         case 'confirmation':
-          return getenv('VK_CONFIRMATION_CODE')
+          return getenv('VK_CONFIRMATION_CODE');
           break;
 
         case 'message_new':
