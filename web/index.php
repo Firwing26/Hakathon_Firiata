@@ -36,7 +36,7 @@ $app->post('/', function() use($app) {
                'message' => 'непонял',
                'access_token' => getenv('VK_TOKEN'),
                'v' => '5.50'
-             )
+             );
              $problem = array(
                'first' => 'курит'
              );
