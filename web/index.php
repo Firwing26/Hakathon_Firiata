@@ -45,9 +45,9 @@ $app->post('/', function() use($app) {
              if ($slovo == $problem) {
                 $request_params['message'] = 'dct gkj[j]';
 }
-             echo "$request_params['message']";
 
-             file_get_content('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
+
+             file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 
 
              return 'ok';
