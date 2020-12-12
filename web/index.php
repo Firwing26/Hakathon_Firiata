@@ -42,7 +42,7 @@ $app->post('/', function() use($app) {
                'sekond' => 'да'
              );
 
-             if ($slovo == $problem) {
+             if ($slovo == $problem['first']) {
                 $request_params['message'] = 'dct gkj[j]';
 }
 
