@@ -61,8 +61,8 @@ $app->post('/', function() use($app) {
         return "nook";
 
 
+        exit('ok');
 
 });
-exit('ok');
 
 $app->run();
