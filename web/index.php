@@ -33,8 +33,7 @@ $app->post('/', function() use($app) {
              $slovo = $data->object->body;
              $request_params = array(
                'user_id' => $data->object->user_id,
-               'message' => 'непонял',
-               'image' => img src="http://php-getting-started/web/images/favicon.png",  
+               'message' => 'непонял', 
                'access_token' => getenv('VK_TOKEN'),
                'v' => '5.50'
              );
