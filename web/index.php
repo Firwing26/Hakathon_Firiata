@@ -39,7 +39,8 @@ $app->post('/', function() use($app) {
              );
              $problem = array(
                'first' => 'курит',
-               'sekond' => 'сбегает'
+               'sekond' => 'сбегает',
+               'sleng'  => 'сленг'
              );
 
              if ($slovo == 'привет')  {
@@ -49,7 +50,10 @@ $app->post('/', function() use($app) {
                 Я знаю такие ключевые слова:
                 курит
                 сбегает' ;
- }
+  }
+                if ($slovo == $problem['sleng'])  {
+                   $request_params['message'] = 'Здесь будут распологаться слова и их значения которые сейчас находятся в обиходе молодежи' ;
+    }
              if ($slovo == $problem['first'] + $problem['first'] ) {
                  $request_params['message'] = 'Данные признаки обычно свидетельствуют о нескольких возможных причин
                  либо ребенок "стал" бунтарем и протистантом
