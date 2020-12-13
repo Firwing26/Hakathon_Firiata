@@ -40,7 +40,8 @@ $app->post('/', function() use($app) {
              $problem = array(
                'first' => 'курит',
                'sekond' => 'сбегает',
-               'sleng'  => 'сленг'
+               'sleng'  => 'сленг',
+               'twen' => 'курит' + 'сбегает'
              );
 
               if ($slovo == 'привет')  {
@@ -57,7 +58,7 @@ $app->post('/', function() use($app) {
                 $request_params['message'] = 'Здесь будут распологаться слова и их значения которые сейчас находятся в обиходе молодежи' ;
               }
 
-              if ($slovo == $problem['first'] + $problem['sekond'])  {
+              if ($slovo == $problem['twen'])  {
                  $request_params['message'] = 'Данные события могли выйти из тяжелых душевных волнений' ;
               }
 
