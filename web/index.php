@@ -58,7 +58,7 @@ $app->post('/', function() use($app) {
                 $request_params['message'] = 'Здесь будут распологаться слова и их значения которые сейчас находятся в обиходе молодежи' ;
               }
 
-              if ($slovo == $problem['twen'])  {
+             if ($slovo == $problem['twen'])  {
                  $request_params['message'] = 'Данные события могли выйти из тяжелых душевных волнений' ;
               }
 
