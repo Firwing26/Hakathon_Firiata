@@ -66,12 +66,12 @@ $app->post('/', function() use($app) {
              }
 
              if ($slovo == 'курит закрыт' or $slovo == 'закрыт курит')  {
-                $request_params['message'] = '1'
+                $request_params['message'] = '1' ;
               }
 
-              if ($slovo == 'сбегает закрыт' or $slovo == 'закрыт сбегает')  {
-                 $request_params['message'] = '2' 
-               }
+             if ($slovo == 'сбегает закрыт' or $slovo == 'закрыт сбегает')  {
+                $request_params['message'] = '2' ;
+              }
 
              if ($slovo == 'курит сбегает' or $slovo == 'сбегает курит')  {
                  $request_params['message'] = 'Данные события могли выйти из тяжелых душевных волнений' ;
